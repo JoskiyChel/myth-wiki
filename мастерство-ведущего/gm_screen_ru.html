@@ -1,0 +1,708 @@
+<!DOCTYPE html> <html lang="ru"><head>
+<title>GM_Screen_RU</title>
+<base href="..">
+<meta name="pathname" content="мастерство-ведущего/gm_screen_ru.html">
+<meta name="description" content="Mythras wiki - GM_Screen_RU">
+<meta property="og:title" content="GM_Screen_RU">
+<meta property="og:description" content="Mythras wiki - GM_Screen_RU">
+<meta property="og:type" content="website">
+<meta property="og:url" content="мастерство-ведущего/gm_screen_ru.html">
+<meta property="og:image" content="undefined">
+<meta charset="UTF-8"><meta property="og:site_name" content="Mythras wiki"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0"><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="site-lib/rss.xml"><script async="" id="webpage-script" src="site-lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><link rel="icon" href="site-lib/media/favicon.png"><link rel="preload" href="site-lib/styles/snippets.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/snippets.css"></noscript><link rel="stylesheet" href="site-lib/styles/obsidian.css"><link rel="preload" href="site-lib/styles/other-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/other-plugins.css"></noscript><link rel="stylesheet" href="site-lib/styles/theme.css"><link rel="preload" href="site-lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="site-lib/styles/supported-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/supported-plugins.css"></noscript><link rel="preload" href="site-lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/main-styles.css"></noscript><style>body{--line-width:40em;--line-width-adaptive:40em;--file-line-width:40em;--sidebar-width:min(20em, 80vw);--collapse-arrow-size:11px;--tree-vertical-spacing:1.3em;--sidebar-margin:12px}:root{background-color:#202124}.sidebar{height:100%;font-size:14px;z-index:10;min-width:calc(var(--sidebar-width) + var(--divider-width-hover));max-width:calc(var(--sidebar-width) + var(--divider-width-hover));position:relative;overflow:hidden;overflow:clip;transition:min-width ease-in-out,max-width ease-in-out;transition-duration:.2s;contain:size}#left-sidebar{left:0}#right-sidebar{right:0}.sidebar.is-collapsed{min-width:0;max-width:0}.sidebar.floating{position:absolute}.sidebar .leaf-content{height:100%;min-width:calc(var(--sidebar-width) - var(--divider-width-hover));top:0;padding:var(--sidebar-margin);padding-top:4em;line-height:var(--line-height-tight);background-color:var(--background-secondary);transition:background-color,border-right,border-left,box-shadow;transition-duration:var(--color-fade-speed);transition-timing-function:ease-in-out;position:absolute;display:flex;flex-direction:column}.sidebar:not(.is-collapsed) .leaf-content{min-width:calc(max(100%,var(--sidebar-width)) - 3px);max-width:calc(max(100%,var(--sidebar-width)) - 3px)}#left-sidebar-content{left:0;border-top-right-radius:var(--radius-l);border-bottom-right-radius:var(--radius-l)}#right-sidebar-content{right:0;border-top-left-radius:var(--radius-l);border-bottom-left-radius:var(--radius-l)}.sidebar #left-sidebar-content,.sidebar #right-sidebar-content{contain:none!important;container-type:normal!important;animation:none!important}.sidebar:has(.leaf-content:empty):has(.topbar-content:empty){display:none}.sidebar-topbar{height:calc(2.3em + 2 * var(--sidebar-margin));width:var(--sidebar-width);padding:var(--sidebar-margin);z-index:1;position:fixed;display:flex;align-items:center;transition:width ease-in-out;transition-duration:inherit}.sidebar.is-collapsed .sidebar-topbar{width:calc(2.3em + var(--sidebar-margin) * 2)}.sidebar .sidebar-topbar.is-collapsed{width:0}#left-sidebar .sidebar-topbar{left:0;flex-direction:row;border-top-right-radius:var(--radius-l)}#right-sidebar .sidebar-topbar{right:0;flex-direction:row-reverse;border-top-left-radius:var(--radius-l)}#left-sidebar .topbar-content{margin-right:calc(2.3em + var(--sidebar-margin));flex-direction:row}#right-sidebar .topbar-content{margin-left:calc(2.3em + var(--sidebar-margin));flex-direction:row-reverse}.topbar-content{overflow:hidden visible;overflow:clip visible;width:100%;height:100%;display:flex;align-items:center;transition:inherit}.sidebar.is-collapsed .topbar-content{width:0;transition:inherit}.clickable-icon.sidebar-collapse-icon{background-color:transparent;color:var(--icon-color-focused);padding:2px!important;margin:0!important;height:100%!important;width:2.3em!important;margin-inline:0.14em!important;position:absolute}#left-sidebar .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);right:var(--sidebar-margin)}#right-sidebar .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);left:var(--sidebar-margin)}.clickable-icon.sidebar-collapse-icon svg.svg-icon{width:100%;height:100%}.feature-title{margin-left:1px;text-transform:uppercase;letter-spacing:.06em;margin-top:.75em;margin-bottom:.75em}.feature-header{display:flex;align-items:center;padding-top:0;font-size:1em;padding-left:0}body.floating-sidebars .sidebar{position:absolute}body{transition:background-color var(--color-fade-speed) ease-in-out}#navbar:not(:empty){display:flex;align-items:center;justify-content:space-between;padding:.5em 1em;width:100%}#main{display:flex;flex-direction:column;height:100%;width:100%;align-items:stretch;justify-content:center}#main-horizontal{display:flex;flex-direction:row;flex-grow:1;width:100%;align-items:stretch;justify-content:center}#center-content{flex-basis:100%;max-width:100%;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;transition:opacity .2s ease-in-out;contain:inline-size}.hide{opacity:0!important;transition:opacity .2s ease-in-out;pointer-events:none}#center-content>.obsidian-document{padding-left:2em;padding-right:1em;margin-bottom:0;width:100%;width:-webkit-fill-available;width:-moz-available;width:fill-available;transition:background-color var(--color-fade-speed) ease-in-out;border-top-right-radius:var(--window-radius,var(--radius-m));border-top-left-radius:var(--window-radius,var(--radius-m));overflow-x:hidden!important;overflow-y:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;contain:inline-size}body #center-content>.obsidian-document>.markdown-preview-sizer{padding-bottom:80vh;width:100%;max-width:var(--line-width);flex-basis:var(--line-width);transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}#center-content>.obsidian-document>div{width:100%!important;transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}#center-content>.obsidian-document:not([data-type=markdown]).embed{display:flex;padding:1em;height:100%;width:100%;align-items:center;justify-content:center}#center-content>.obsidian-document:not([data-type=markdown]).embed>*{max-width:100%;max-height:100%;object-fit:contain}:not(h1,h2,h3,h4,h5,h6,li):has(> :is(.math,table)){overflow-x:auto!important}#center-content>.obsidian-document:not([data-type=markdown]){overflow-x:auto;contain:content;padding:0;margin:0;height:100%}.obsidian-document[data-type=attachment]{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;width:100%}.obsidian-document[data-type=attachment]>*{outline:0;border:none;box-shadow:none}.obsidian-document[data-type=attachment] :is(img){max-width:90%;max-height:90%;object-fit:contain}.obsidian-document[data-type=attachment]>:is(audio){width:100%;max-width:min(90%,var(--line-width))}.obsidian-document[data-type=attachment]>:is(embed,iframe,video){width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain}.canvas-wrapper>:is(.header,.footer){z-index:100;position:absolute;display:flex;justify-content:center;flex-direction:column;width:100%;align-items:center}.scroll-highlight{position:absolute;width:100%;height:100%;pointer-events:none;z-index:1000;background-color:hsla(var(--color-accent-hsl),.25);opacity:0;padding:1em;inset:50%;translate:-50% -50%;border-radius:var(--radius-s)}</style><script defer="">async function loadIncludes(){let e=document.querySelectorAll("link[itemprop='include']");for(const t of e){let e=t.getAttribute("href");try{let o="";if(e.startsWith("https:")||e.startsWith("http:")||"file:"!=window.location.protocol){const n=await fetch(e);if(!n.ok){console.log("Could not include file: "+e),t?.remove();continue}o=await n.text()}else{const t=document.getElementById(btoa(encodeURI(e)));if(t){const e=JSON.parse(decodeURI(atob(t.getAttribute("value")??"")));o=e?.data??""}}let n=document.createRange().createContextualFragment(o);t.before(n),t.remove(),console.log("Included text: "+o),console.log("Included file: "+e)}catch(o){t?.remove(),console.log("Could not include file: "+e,o);continue}}}document.addEventListener("DOMContentLoaded",(()=>{loadIncludes()}));let isFileProtocol="file:"==location.protocol;function waitLoadScripts(e,t){let o=e.map((e=>document.getElementById(e+"-script")));!function e(n){let l=o[n],c=n+1;l?(l&&"true"!=l.getAttribute("loaded")||n<o.length&&e(c),n<o.length&&l.addEventListener("load",(()=>e(c)))):n<o.length?e(c):t()}(0)}</script></head><body class="publish css-settings-manager mod-windows is-frameless is-hidden-frameless styled-scrollbars show-ribbon hide-folder-note folder-note-underline fn-ignore-attachment-folder fas-adaptive-accent fas-theme-light-print fas-silver-light fas-navy fas-sans-serif fas-bg-textures fas-status-bar-default-hover fas-workspace-foreground-contrast fas-workspace-foreground-no-fading fas-compact fas-highlight-active-note fas-print-note-background fas-callout-cite-alt fas-callout-infobox fas-infobox-lp-mini fas-headings-accent fas-h1-display-left-aligned fas-h2-stroke-left-aligned fas-hr fas-border-tables fas-statblocks-accent fas-skin-art-deco"><script defer="">let theme=localStorage.getItem("theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");"dark"==theme?(document.body.classList.add("theme-dark"),document.body.classList.remove("theme-light")):(document.body.classList.add("theme-light"),document.body.classList.remove("theme-dark")),window.innerWidth<480?document.body.classList.add("is-phone"):window.innerWidth<768?document.body.classList.add("is-tablet"):window.innerWidth<1024?document.body.classList.add("is-small-screen"):document.body.classList.add("is-large-screen")</script><div class="parsed-feature-container" style="display: contents;"><link itemprop="include" href="site-lib/html/custom-head-content-content.html"></div><div id="main"><div id="navbar"></div><div id="main-horizontal"><div id="left-content" class="leaf" style="--sidebar-width: var(--sidebar-width-left);"><div id="left-sidebar" class="sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><div id="search-container"><div id="search-wrapper"><input enterkeyhint="search" type="search" spellcheck="false" placeholder="Search..."><div aria-label="Clear search" id="search-clear-button"></div></div></div></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content-wrapper"><div id="left-sidebar-content" class="leaf-content"><link itemprop="include" href="site-lib/html/file-tree-content.html"></div></div><script defer="">let ls = document.querySelector("#left-sidebar"); ls.classList.toggle("is-collapsed", window.innerWidth < 768); ls.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-left-width"));</script></div></div><div id="center-content" class="leaf"><div class="obsidian-document markdown-preview-view markdown-rendered node-insert-event is-readable-line-width allow-fold-headings allow-fold-lists show-indentation-guide show-properties" data-type="markdown"><style id="MJX-CHTML-styles"></style><div class="markdown-preview-sizer markdown-preview-section"><div class="header"><h1 class="page-title heading" id="GM_Screen_RU_0">GM_Screen_RU</h1><div class="data-bar"></div></div><div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div><div class="el-h1"><h1 data-heading="Экран ведущего Mythras — перевод на русский" dir="auto" class="heading" id="Экран_ведущего_Mythras_—_перевод_на_русский_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Экран ведущего Mythras — перевод на русский</h1></div><div class="el-h2"><h2 data-heading="Навыки" dir="auto" class="heading" id="Навыки_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Навыки</h2></div><div class="el-h3"><h3 data-heading="Таблица степеней сложности" dir="auto" class="heading" id="Таблица_степеней_сложности_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Таблица степеней сложности</h3></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">Степень сложности</th>
+<th dir="ltr">Модификатор навыка</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr">Автоматическая</td>
+<td dir="ltr">Бросок не требуется</td>
+</tr>
+<tr>
+<td dir="ltr">Очень лёгкая</td>
+<td dir="ltr">Удвоить значение навыка</td>
+</tr>
+<tr>
+<td dir="ltr">Лёгкая</td>
+<td dir="ltr">Добавить половину значения навыка</td>
+</tr>
+<tr>
+<td dir="ltr">Обычная</td>
+<td dir="ltr">Без изменений</td>
+</tr>
+<tr>
+<td dir="ltr">Трудная</td>
+<td dir="ltr">Уменьшить значение навыка на одну треть</td>
+</tr>
+<tr>
+<td dir="ltr">Внушительная</td>
+<td dir="ltr">Уменьшить значение навыка наполовину</td>
+</tr>
+<tr>
+<td dir="ltr">Геркулесова</td>
+<td dir="ltr">Уменьшить значение навыка до одной десятой</td>
+</tr>
+<tr>
+<td dir="ltr">Безнадёжная</td>
+<td dir="ltr">Попытка невозможна</td>
+</tr>
+</tbody>
+</table></div><div class="el-p"><p dir="auto"><em>Если персонаж уже получает штраф от других обстоятельств, применяется самая тяжёлая степень сложности.</em></p></div><div class="el-h3"><h3 data-heading="Повышение существующих навыков" dir="auto" class="heading" id="Повышение_существующих_навыков_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Повышение существующих навыков</h3></div><div class="el-ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span>Любой навык на листе персонажа, стандартный или профессиональный, можно повысить, потратив один бросок опыта.</li>
+<li data-line="1" dir="auto"><span class="list-bullet"></span>Игрок бросает 1d100 и сравнивает результат с повышаемым навыком. INT персонажа прибавляется к броску.</li>
+<li data-line="2" dir="auto"><span class="list-bullet"></span>Если результат равен значению улучшаемого навыка или превышает его, навык повышается на 1d4+1%.</li>
+<li data-line="3" dir="auto"><span class="list-bullet"></span>Если результат меньше значения выбранного навыка, навык всё равно повышается, но только на 1%.</li>
+<li data-line="4" dir="auto"><span class="list-bullet"></span>Если персонаж провалил с фиаско какой-либо навык с момента последней серии бросков опыта, этот навык получает бесплатное повышение на 1%. Мы учимся на ошибках не меньше, чем на успехах: это отражает выводы после катастрофической неудачи. Несколько фиаско одного навыка не складываются.</li>
+</ul></div><div class="el-h3"><h3 data-heading="Таблица компетентности навыков" dir="auto" class="heading" id="Таблица_компетентности_навыков_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Таблица компетентности навыков</h3></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">Навык</th>
+<th dir="ltr">Компетенция</th>
+<th dir="ltr">Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="auto">1-30%</td>
+<td dir="ltr">Новичок</td>
+<td dir="ltr">Неквалифицированный ученик, всё ещё осваивает основы.</td>
+</tr>
+<tr>
+<td dir="auto">31-50%</td>
+<td dir="ltr">Компетентный</td>
+<td dir="ltr">Может выполнять лёгкие задачи, если не спешит.</td>
+</tr>
+<tr>
+<td dir="auto">51-70%</td>
+<td dir="ltr">Умелый</td>
+<td dir="ltr">Достиг уровня компетентности, пригодного для работы.</td>
+</tr>
+<tr>
+<td dir="auto">71-90%</td>
+<td dir="ltr">Эксперт</td>
+<td dir="ltr">Провёл годы как профессионал.</td>
+</tr>
+<tr>
+<td dir="auto">91-110%</td>
+<td dir="ltr">Мастер</td>
+<td dir="ltr">Считается одним из лучших в местном сообществе.</td>
+</tr>
+<tr>
+<td dir="auto">&gt;110%</td>
+<td dir="ltr">Парагон</td>
+<td dir="ltr">Широко известен благодаря совершенному владению навыком.</td>
+</tr>
+</tbody>
+</table></div><div class="el-h3"><h3 data-heading="Таблица повышения при обучении" dir="auto" class="heading" id="Таблица_повышения_при_обучении_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Таблица повышения при обучении</h3></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">Разница</th>
+<th dir="ltr">Навык повышается на</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="auto">21-30%</td>
+<td dir="ltr">1d2</td>
+</tr>
+<tr>
+<td dir="auto">31-40%</td>
+<td dir="ltr">1d3</td>
+</tr>
+<tr>
+<td dir="auto">41-50%</td>
+<td dir="ltr">1d4</td>
+</tr>
+<tr>
+<td dir="auto">51-60%</td>
+<td dir="ltr">1d6</td>
+</tr>
+<tr>
+<td dir="auto">61-70%</td>
+<td dir="ltr">1d6+1</td>
+</tr>
+<tr>
+<td dir="auto">71-80%</td>
+<td dir="ltr">1d6+2</td>
+</tr>
+<tr>
+<td dir="auto">81-90%</td>
+<td dir="ltr">1d6+3</td>
+</tr>
+<tr>
+<td dir="auto">91-100%</td>
+<td dir="ltr">1d6+4</td>
+</tr>
+<tr>
+<td dir="ltr">Каждые 10%</td>
+<td dir="auto">+1</td>
+</tr>
+</tbody>
+</table></div><div class="el-h3"><h3 data-heading="Стандартные навыки" dir="auto" class="heading" id="Стандартные_навыки_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Стандартные навыки</h3></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">Навык</th>
+<th dir="ltr">База</th>
+<th dir="ltr">Навык</th>
+<th dir="ltr">База</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr">Атлетика</td>
+<td dir="ltr">(STR+DEX)</td>
+<td dir="ltr">Влияние</td>
+<td dir="ltr">(CHA ×2)</td>
+</tr>
+<tr>
+<td dir="ltr">Лодки</td>
+<td dir="ltr">(STR+CON)</td>
+<td dir="ltr">Проницательность</td>
+<td dir="ltr">(INT+POW)</td>
+</tr>
+<tr>
+<td dir="ltr">Сила</td>
+<td dir="ltr">(STR+SIZ)</td>
+<td dir="ltr">Местность</td>
+<td dir="ltr">(INT ×2)</td>
+</tr>
+<tr>
+<td dir="ltr">Маскировка</td>
+<td dir="ltr">(DEX+POW)</td>
+<td dir="ltr">Родной язык</td>
+<td dir="ltr">(INT+CHA)</td>
+</tr>
+<tr>
+<td dir="ltr">Обычаи</td>
+<td dir="ltr">(INT ×2)</td>
+<td dir="ltr">Восприятие</td>
+<td dir="ltr">(INT+POW)</td>
+</tr>
+<tr>
+<td dir="ltr">Танец</td>
+<td dir="ltr">(DEX+CHA)</td>
+<td dir="ltr">Чистота</td>
+<td dir="ltr">(POW+CHA)×4</td>
+</tr>
+<tr>
+<td dir="ltr">Обман</td>
+<td dir="ltr">(INT+CHA)</td>
+<td dir="ltr">Верховая езда</td>
+<td dir="ltr">(DEX+POW)</td>
+</tr>
+<tr>
+<td dir="ltr">Управление повозкой</td>
+<td dir="ltr">(DEX+POW)</td>
+<td dir="ltr">Пение</td>
+<td dir="ltr">(POW+CHA)</td>
+</tr>
+<tr>
+<td dir="ltr">Стойкость</td>
+<td dir="ltr">(CON ×2)</td>
+<td dir="ltr">Скрытность</td>
+<td dir="ltr">(DEX+INT)</td>
+</tr>
+<tr>
+<td dir="ltr">Уклонение</td>
+<td dir="ltr">(DEX ×2)</td>
+<td dir="ltr">Плавание</td>
+<td dir="ltr">(STR+CON)</td>
+</tr>
+<tr>
+<td dir="ltr">Первая помощь</td>
+<td dir="ltr">(DEX+INT)</td>
+<td dir="ltr">Без оружия</td>
+<td dir="ltr">(STR+DEX)</td>
+</tr>
+<tr>
+<td dir="ltr">Игры</td>
+<td dir="ltr">(INT+POW)</td>
+<td dir="ltr">Сила воли</td>
+<td dir="ltr">(POW ×2)</td>
+</tr>
+</tbody>
+</table></div><div class="el-h3"><h3 data-heading="Профессиональные навыки" dir="auto" class="heading" id="Профессиональные_навыки_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Профессиональные навыки</h3></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">Навык</th>
+<th dir="ltr">База</th>
+<th dir="ltr">Навык</th>
+<th dir="ltr">База</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr">Акробатика</td>
+<td dir="ltr">(STR+DEX)</td>
+<td dir="ltr">Навигация</td>
+<td dir="ltr">(INT+POW)</td>
+</tr>
+<tr>
+<td dir="ltr">Бюрократия</td>
+<td dir="ltr">(INT ×2)</td>
+<td dir="ltr">Ораторство</td>
+<td dir="ltr">(POW+CHA)</td>
+</tr>
+<tr>
+<td dir="ltr">Торговля</td>
+<td dir="ltr">(INT+CHA)</td>
+<td dir="ltr">Морское дело</td>
+<td dir="ltr">(INT+CON)</td>
+</tr>
+<tr>
+<td dir="ltr">Этикет</td>
+<td dir="ltr">(INT+CHA)</td>
+<td dir="ltr">Соблазнение</td>
+<td dir="ltr">(INT+CHA)</td>
+</tr>
+<tr>
+<td dir="ltr">Ремесло</td>
+<td dir="ltr">(DEX+INT)</td>
+<td dir="ltr">Ловкость рук</td>
+<td dir="ltr">(DEX+CHA)</td>
+</tr>
+<tr>
+<td dir="ltr">Культура</td>
+<td dir="ltr">(INT ×2)</td>
+<td dir="ltr">Уличная смекалка</td>
+<td dir="ltr">(POW+CHA)</td>
+</tr>
+<tr>
+<td dir="ltr">Инженерия</td>
+<td dir="ltr">(INT ×2)</td>
+<td dir="ltr">Выживание</td>
+<td dir="ltr">(CON+POW)</td>
+</tr>
+<tr>
+<td dir="ltr">Лечение</td>
+<td dir="ltr">(INT+POW)</td>
+<td dir="ltr">Обучение</td>
+<td dir="ltr">(INT+CHA)</td>
+</tr>
+<tr>
+<td dir="ltr">Язык</td>
+<td dir="ltr">(INT+CHA)</td>
+<td dir="ltr">Выслеживание</td>
+<td dir="ltr">(INT+CON)</td>
+</tr>
+<tr>
+<td dir="ltr">Грамотность</td>
+<td dir="ltr">(INT ×2)</td>
+<td dir="auto"></td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="ltr">Знание</td>
+<td dir="ltr">(INT ×2)</td>
+<td dir="auto"></td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="ltr">Музыкальность</td>
+<td dir="ltr">(DEX+CHA)</td>
+<td dir="auto"></td>
+<td dir="auto"></td>
+</tr>
+</tbody>
+</table></div><div class="el-h2"><h2 data-heading="Ситуационные модификаторы" dir="auto" class="heading" id="Ситуационные_модификаторы_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Ситуационные модификаторы</h2></div><div class="el-h3"><h3 data-heading="Ближний бой" dir="auto" class="heading" id="Ближний_бой_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Ближний бой</h3></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">Ситуация</th>
+<th dir="ltr">Степень сложности</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr">Атака беспомощной цели</td>
+<td dir="ltr">Автоматическая</td>
+</tr>
+<tr>
+<td dir="ltr">Атака в стеснённых условиях</td>
+<td dir="ltr">Трудная</td>
+</tr>
+<tr>
+<td dir="ltr">Защита с нижней позиции или против всадника</td>
+<td dir="ltr">Трудная</td>
+</tr>
+<tr>
+<td dir="ltr">Бой на неустойчивой поверхности</td>
+<td dir="ltr">Трудная</td>
+</tr>
+<tr>
+<td dir="ltr">Бой пригнувшись или с одного колена</td>
+<td dir="ltr">Трудная</td>
+</tr>
+<tr>
+<td dir="ltr">Бой при плохой видимости (густой туман, метель)</td>
+<td dir="ltr">Трудная</td>
+</tr>
+<tr>
+<td dir="ltr">Защита от атаки сзади</td>
+<td dir="ltr">Внушительная</td>
+</tr>
+<tr>
+<td dir="ltr">Бой лёжа</td>
+<td dir="ltr">Внушительная</td>
+</tr>
+<tr>
+<td dir="ltr">Бой в полутьме (тусклое освещение)</td>
+<td dir="ltr">Внушительная</td>
+</tr>
+<tr>
+<td dir="ltr">Бой в кромешной тьме (освещения нет)</td>
+<td dir="ltr">Геркулесова</td>
+</tr>
+<tr>
+<td dir="ltr">Ослеплён или лишён основного чувства восприятия</td>
+<td dir="ltr">Геркулесова</td>
+</tr>
+</tbody>
+</table></div><div class="el-h3"><h3 data-heading="Дальний бой" dir="auto" class="heading" id="Дальний_бой_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Дальний бой</h3></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">Ситуация</th>
+<th dir="ltr">Степень сложности</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr">Лёгкий ветер*</td>
+<td dir="ltr">Трудная</td>
+</tr>
+<tr>
+<td dir="ltr">Умеренный ветер*</td>
+<td dir="ltr">Внушительная</td>
+</tr>
+<tr>
+<td dir="ltr">Сильный ветер*</td>
+<td dir="ltr">Геркулесова</td>
+</tr>
+<tr>
+<td dir="ltr">Шквал, буря или хуже*</td>
+<td dir="ltr">Безнадёжная</td>
+</tr>
+<tr>
+<td dir="ltr">Цель бежит</td>
+<td dir="ltr">Трудная</td>
+</tr>
+<tr>
+<td dir="ltr">Цель мчится спринтом</td>
+<td dir="ltr">Внушительная</td>
+</tr>
+<tr>
+<td dir="ltr">Цель скрыта дымкой или находится в полутьме</td>
+<td dir="ltr">Трудная</td>
+</tr>
+<tr>
+<td dir="ltr">Цель скрыта густым дымом, туманом или находится во тьме</td>
+<td dir="ltr">Внушительная</td>
+</tr>
+<tr>
+<td dir="ltr">Цель полностью скрыта</td>
+<td dir="ltr">Геркулесова</td>
+</tr>
+<tr>
+<td dir="ltr">Ослеплён или лишён основного чувства восприятия</td>
+<td dir="ltr">Безнадёжная</td>
+</tr>
+<tr>
+<td dir="ltr">Цель лежит</td>
+<td dir="ltr">Внушительная</td>
+</tr>
+<tr>
+<td dir="ltr">Атакующий лежит**</td>
+<td dir="ltr">Геркулесова</td>
+</tr>
+<tr>
+<td dir="ltr">Атакующий на неустойчивой поверхности</td>
+<td dir="ltr">Трудная</td>
+</tr>
+</tbody>
+</table></div><div class="el-p"><p dir="auto"><em>* Если метательное оружие или боеприпасы уязвимы для бокового ветра; заменяет обычный штраф ветра к физическим навыкам.<br>
+** Штраф можно отменить, если стрелять из арбалета с подготовленной позиции.</em></p></div><div class="el-h3"><h3 data-heading="Штрафы за дистанцию" dir="auto" class="heading" id="Штрафы_за_дистанцию_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Штрафы за дистанцию</h3></div><div class="el-p"><p dir="auto">| Дистанция<br>
+(локти) | SIZ &lt;10 | SIZ 11-20 | SIZ 21-40 | SIZ 41-80 | SIZ 81-150 | SIZ 151-300 |<br>
+| --- | --- | --- | --- | --- | --- | --- |<br>
+| 1-40 | на 1 ступень<br>сложнее | без эффекта | на 1 ступень<br>легче | на 1 ступень<br>легче | на 2 ступени<br>легче | на 2 ступени<br>легче |<br>
+| 41-80 | на 1 ступень<br>сложнее | на 1 ступень<br>сложнее | без эффекта | на 1 ступень<br>легче | на 1 ступень<br>легче | на 2 ступени<br>легче |<br>
+| 81-120 | на 2 ступени<br>сложнее | на 1 ступень<br>сложнее | на 1 ступень<br>сложнее | без эффекта | на 1 ступень<br>легче | на 1 ступень<br>легче |<br>
+| 121-160 | на 2 ступени<br>сложнее | на 2 ступени<br>сложнее | на 1 ступень<br>сложнее | на 1 ступень<br>сложнее | без эффекта | на 1 ступень<br>легче |<br>
+| 161-200 | на 3 ступени<br>сложнее | на 2 ступени<br>сложнее | на 2 ступени<br>сложнее | на 1 ступень<br>сложнее | на 1 ступень<br>сложнее | без эффекта |<br>
+| 201-240 | на 3 ступени<br>сложнее | на 3 ступени<br>сложнее | на 2 ступени<br>сложнее | на 2 ступени<br>сложнее | на 1 ступень<br>сложнее | на 1 ступень<br>сложнее |<br>
+| 241-280 | на 4 ступени<br>сложнее | на 3 ступени<br>сложнее | на 3 ступени<br>сложнее | на 2 ступени<br>сложнее | на 2 ступени<br>сложнее | на 1 ступень<br>сложнее |</p></div><div class="el-h2"><h2 data-heading="Урон" dir="auto" class="heading" id="Урон_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Урон</h2></div><div class="el-h3"><h3 data-heading="Локации попаданий гуманоидов" dir="auto" class="heading" id="Локации_попаданий_гуманоидов_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Локации попаданий гуманоидов</h3></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">1d20</th>
+<th dir="ltr">Локация</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="auto">1-3</td>
+<td dir="ltr">Правая нога</td>
+</tr>
+<tr>
+<td dir="auto">4-6</td>
+<td dir="ltr">Левая нога</td>
+</tr>
+<tr>
+<td dir="auto">7-9</td>
+<td dir="ltr">Живот</td>
+</tr>
+<tr>
+<td dir="auto">10-12</td>
+<td dir="ltr">Грудь</td>
+</tr>
+<tr>
+<td dir="auto">13-15</td>
+<td dir="ltr">Правая рука</td>
+</tr>
+<tr>
+<td dir="auto">16-18</td>
+<td dir="ltr">Левая рука</td>
+</tr>
+<tr>
+<td dir="auto">19-20</td>
+<td dir="ltr">Голова</td>
+</tr>
+</tbody>
+</table></div><div class="el-h3"><h3 data-heading="Действия первой помощи" dir="auto" class="heading" id="Действия_первой_помощи_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Действия первой помощи</h3></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">Травма</th>
+<th dir="ltr">Успешное лечение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr">Удушье</td>
+<td dir="ltr">Жертва снова начинает дышать.</td>
+</tr>
+<tr>
+<td dir="ltr">Кровотечение</td>
+<td dir="ltr">Кровотечение останавливается.</td>
+</tr>
+<tr>
+<td dir="ltr">Пронзение</td>
+<td dir="ltr">Пронзивший предмет удалён без дополнительного урона жертве.</td>
+</tr>
+<tr>
+<td dir="ltr">Без сознания</td>
+<td dir="ltr">Если бессознательность не вызвана ядом или наркотиками, раненый приходит в себя.</td>
+</tr>
+<tr>
+<td dir="ltr">Лёгкая рана</td>
+<td dir="ltr">Успех: восстановить 1d3.<br>Критический успех: восстановить 1d6.<br>Фиаско: 1 урон.</td>
+</tr>
+<tr>
+<td dir="ltr">Серьёзная рана</td>
+<td dir="ltr">Успех: частично вернуть функциональность и сознание.<br>Критический успех: также восстановить 1d3.<br>Фиаско: 1 урон.</td>
+</tr>
+<tr>
+<td dir="ltr">Тяжёлая рана</td>
+<td dir="ltr">Успех: частично вернуть функциональность и сознание.<br>Критический успех: также восстановить 1d3.<br>Фиаско: 1 урон.</td>
+</tr>
+</tbody>
+</table></div><div class="el-h3"><h3 data-heading="Раны и лечение" dir="auto" class="heading" id="Раны_и_лечение_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Раны и лечение</h3></div><div class="el-p"><p dir="auto">| Тяжесть | Порог | Эффект | Провал<br>
+Стойкости | Естественное<br>
+заживление | Первая<br>
+помощь | Лечение |<br>
+| --- | --- | --- | --- | --- | --- | --- |<br>
+| Лёгкая<br>рана | Хиты всё ещё<br>положительные | Нет | Нет | Восстановить норму лечения каждый день без напряжённой активности, иначе -1d3. | Успех: 1d3.<br>Критический успех: 1d6.<br>Фиаско: 1 урон. | Нет |<br>
+| Серьёзная<br>рана | 0 хитов<br>или ниже | Постоянный шрам; нельзя атаковать или колдовать 1d3 хода; сложность действий с этой областью +1 ступень до лечения. | Руки: роняет предметы.<br>Ноги: бесполезны, персонаж падает.<br>Живот, грудь или голова: без сознания на число минут, равное урону. | Восстановить норму лечения каждую неделю без напряжённой активности, иначе -1d3. | Успех: частичная функциональность и сознание.<br>Критический успех: также 1d3.<br>Фиаско: 1 урон. | Успех: 1d3 и сознание.<br>Критический успех: 1d3+1 и сознание.<br>Фиаско: 1 урон. |<br>
+| Тяжёлая<br>рана | Отрицательные хиты равны начальному максимуму или ниже | Постоянный шрам. Руки или ноги: отсечены, раздавлены, раздроблены или оторваны. Живот, грудь или голова: без сознания; смерть без лечения в течение числа раундов боя, равного норме лечения. | Руки или ноги: без сознания и смерть без лечения за пять норм лечения минут.<br>Живот, грудь или голова: обезглавлен, рассечён, пронзён в сердце, разорван и мгновенно мёртв. | После лечения: норма лечения каждый месяц без напряжённой активности, иначе -1d3; постоянная травма, если не лечить за число дней, равное 1/20 соответствующего навыка. | Успех: стабилизирует.<br>Критический успех: частичная функциональность и разрешает естественное заживление.<br>Фиаско: 1 урон. | После стабилизации. Успех: операция/сведение костей/сшивание культи/извлечение предметов, разрешает естественное заживление.<br>Критический успех: также 1 хит.<br>Фиаско: пройти Стойкость или умереть. |</p></div><div class="el-h3"><h3 data-heading="Постоянные травмы" dir="auto" class="heading" id="Постоянные_травмы_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Постоянные травмы</h3></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">1d3</th>
+<th dir="ltr">Снижение хитов</th>
+<th dir="ltr">Итог увечья</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="auto">1</td>
+<td dir="ltr">Персонаж навсегда теряет одну треть хитов этой локации.</td>
+<td dir="ltr">Если это конечность - искалечена кисть или стопа. Если голова - персонаж теряет один орган чувств: глаз, ухо, нос или язык. В других местах это обезображивающий шрам.</td>
+</tr>
+<tr>
+<td dir="auto">2</td>
+<td dir="ltr">Персонаж навсегда теряет две трети хитов этой локации.</td>
+<td dir="ltr">Конечность искалечена от локтя или колена и ниже. Голова теряет два органа чувств. Торс получает ужасный уродующий шрам.</td>
+</tr>
+<tr>
+<td dir="auto">3</td>
+<td dir="ltr">Локация уменьшается до одного хита.</td>
+<td dir="ltr">Конечности искалечены от плеча или бедра и ниже. Голова теряет три органа чувств, половину лица или всю челюсть. Грудь или живот имеют столь чудовищный шрам или деформацию, что никто, увидев зажившую рану, не понимает, как жертва выжила.</td>
+</tr>
+</tbody>
+</table></div><div class="el-h2"><h2 data-heading="Движение и усталость" dir="auto" class="heading" id="Движение_и_усталость_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Движение и усталость</h2></div><div class="el-h3"><h3 data-heading="Путешествия в стратегическом времени" dir="auto" class="heading" id="Путешествия_в_стратегическом_времени_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Путешествия в стратегическом времени</h3></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">Пример путешествия</th>
+<th dir="ltr">Дистанция за день</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr">Пешком</td>
+<td dir="ltr">40 милов</td>
+</tr>
+<tr>
+<td dir="ltr">Верхом спокойным ходом</td>
+<td dir="ltr">60 милов</td>
+</tr>
+<tr>
+<td dir="ltr">Повозка спокойным ходом</td>
+<td dir="ltr">15 милов</td>
+</tr>
+<tr>
+<td dir="ltr">Открытое море, благоприятные условия</td>
+<td dir="ltr">150-300 милов</td>
+</tr>
+<tr>
+<td dir="ltr">Открытое море, неблагоприятные условия</td>
+<td dir="ltr">0-60 милов</td>
+</tr>
+<tr>
+<td dir="ltr">Побережье или река, благоприятные условия</td>
+<td dir="ltr">30-60 милов</td>
+</tr>
+<tr>
+<td dir="ltr">Побережье или река, неблагоприятные условия</td>
+<td dir="ltr">0-30 милов</td>
+</tr>
+</tbody>
+</table></div><div class="el-p"><p dir="auto"><em>1 мил примерно равен 1 км; 40 милов - путь за день.</em></p></div><div class="el-h3"><h3 data-heading="Сравнительное движение" dir="auto" class="heading" id="Сравнительное_движение_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Сравнительное движение</h3></div><div class="el-p"><p dir="auto">| Период | Движение<br>
+8 локтей | Движение<br>
+12 локтей | Движение<br>
+16 локтей | Движение<br>
+20 локтей | Движение<br>
+24 локтя | Движение<br>
+28 локтей |<br>
+| --- | --- | --- | --- | --- | --- | --- |<br>
+| Раунд боя | 8 локт. | 12 локт. | 16 локт. | 20 локт. | 24 локт. | 28 локт. |<br>
+| Минута | 96 локт. | 144 локт. | 192 локт. | 240 локт. | 288 локт. | 336 локт. |<br>
+| Час | 0.7 парасанга | 1 парасанг | 1.3 парасанга | 1.7 парасанга | 2 парасанга | 2.3 парасанга |</p></div><div class="el-h3"><h3 data-heading="Уровни усталости" dir="auto" class="heading" id="Уровни_усталости_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Уровни усталости</h3></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">Уровень усталости</th>
+<th dir="ltr">Степень навыка</th>
+<th dir="ltr">Движение</th>
+<th dir="ltr">Инициатива</th>
+<th dir="ltr">Очки действий</th>
+<th dir="ltr">Время восстановления</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr">Свежий</td>
+<td dir="ltr">Без штрафов</td>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="ltr">Запыхавшийся</td>
+<td dir="ltr">Трудная</td>
+<td dir="ltr">Без штрафа</td>
+<td dir="ltr">Без штрафа</td>
+<td dir="ltr">Без штрафа</td>
+<td dir="ltr">15 минут</td>
+</tr>
+<tr>
+<td dir="ltr">Уставший</td>
+<td dir="ltr">Трудная</td>
+<td dir="ltr">-2 локтя</td>
+<td dir="ltr">Без штрафа</td>
+<td dir="ltr">Без штрафа</td>
+<td dir="ltr">3 часа</td>
+</tr>
+<tr>
+<td dir="ltr">Измотанный</td>
+<td dir="ltr">Внушительная</td>
+<td dir="ltr">-4 локтя</td>
+<td dir="auto">-2</td>
+<td dir="ltr">Без штрафа</td>
+<td dir="ltr">6 часов</td>
+</tr>
+<tr>
+<td dir="ltr">Обессиленный</td>
+<td dir="ltr">Внушительная</td>
+<td dir="ltr">Половина</td>
+<td dir="auto">-4</td>
+<td dir="auto">-1</td>
+<td dir="ltr">12 часов</td>
+</tr>
+<tr>
+<td dir="ltr">Ослабленный</td>
+<td dir="ltr">Геркулесова</td>
+<td dir="ltr">Половина</td>
+<td dir="auto">-6</td>
+<td dir="auto">-2</td>
+<td dir="ltr">18 часов</td>
+</tr>
+<tr>
+<td dir="ltr">Недееспособный</td>
+<td dir="ltr">Геркулесова</td>
+<td dir="ltr">Неподвижен</td>
+<td dir="auto">-8</td>
+<td dir="auto">-3</td>
+<td dir="ltr">24 часа</td>
+</tr>
+<tr>
+<td dir="ltr">Полусознание</td>
+<td dir="ltr">Безнадёжная</td>
+<td dir="ltr">Действия невозможны</td>
+<td dir="ltr">Действия невозможны</td>
+<td dir="ltr">Действия невозможны</td>
+<td dir="ltr">36 часов</td>
+</tr>
+<tr>
+<td dir="ltr">Кома</td>
+<td dir="ltr">Действия невозможны</td>
+<td dir="ltr">Действия невозможны</td>
+<td dir="ltr">Действия невозможны</td>
+<td dir="ltr">Действия невозможны</td>
+<td dir="ltr">48 часов</td>
+</tr>
+<tr>
+<td dir="ltr">Мёртв</td>
+<td dir="ltr">Мёртв</td>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="ltr">Никогда</td>
+</tr>
+</tbody>
+</table></div><div class="el-h3"><h3 data-heading="Физическое усилие" dir="auto" class="heading" id="Физическое_усилие_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Физическое усилие</h3></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">Усилие</th>
+<th dir="ltr">Как долго?</th>
+<th dir="ltr">Пример</th>
+<th dir="ltr">Бросок навыка</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr">Лёгкое</td>
+<td dir="ltr">CON в часах</td>
+<td dir="ltr">Действия без нагрузки на тело. Все разумные действия в ровном темпе.</td>
+<td dir="ltr">Очень лёгкий бросок против Атлетики, Силы или Стойкости по задаче: Атлетика для упражнений, Сила для подъёма тяжестей, Стойкость для общих действий.</td>
+</tr>
+<tr>
+<td dir="ltr">Среднее</td>
+<td dir="ltr">CON в минутах</td>
+<td dir="ltr">Ручной труд; длительная физическая нагрузка.</td>
+<td dir="ltr">То же, но с Лёгкой степенью.</td>
+</tr>
+<tr>
+<td dir="ltr">Напряжённое</td>
+<td dir="ltr">CON в секундах (округлить до следующего раунда боя)</td>
+<td dir="ltr">Бой; борьба со стихией; физическая активность в крайне неблагоприятных условиях.</td>
+<td dir="ltr">Обычный бросок против Атлетики, Силы или Стойкости по задаче: Атлетика для упражнений, Сила для подъёма тяжестей, Стойкость для боя.</td>
+</tr>
+</tbody>
+</table></div><div class="footer"><div class="data-bar"></div></div></div></div></div><div id="right-content" class="leaf" style="--sidebar-width: var(--sidebar-width-right);"><div id="right-sidebar" class="sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme-toggle-input" id=""><input class="theme-toggle-input" type="checkbox" id="theme-toggle-input"><div class="toggle-background"></div></label></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content-wrapper"><div id="right-sidebar-content" class="leaf-content"><div id="outline" class=" tree-container"><div class="feature-header"><div class="feature-title">Table Of Contents</div><button class="clickable-icon nav-action-button tree-collapse-all" aria-label="Collapse All"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-item" data-depth="1"><a class="tree-item-self is-clickable" href="мастерство-ведущего/gm_screen_ru.html#GM_Screen_RU_0" data-path="#GM_Screen_RU_0"><div class="tree-item-inner heading-link" heading-name="GM_Screen_RU">GM_Screen_RU</div></a><div class="tree-item-children"></div></div><div class="tree-item mod-collapsible" data-depth="1"><a class="tree-item-self is-clickable mod-collapsible" href="мастерство-ведущего/gm_screen_ru.html#Экран_ведущего_Mythras_—_перевод_на_русский_0" data-path="#Экран_ведущего_Mythras_—_перевод_на_русский_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner heading-link" heading-name="Экран ведущего Mythras — перевод на русский">Экран ведущего Mythras — перевод на русский</div></a><div class="tree-item-children"><div class="tree-item mod-collapsible" data-depth="2"><a class="tree-item-self is-clickable mod-collapsible" href="мастерство-ведущего/gm_screen_ru.html#Навыки_0" data-path="#Навыки_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner heading-link" heading-name="Навыки">Навыки</div></a><div class="tree-item-children"><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="мастерство-ведущего/gm_screen_ru.html#Таблица_степеней_сложности_0" data-path="#Таблица_степеней_сложности_0"><div class="tree-item-inner heading-link" heading-name="Таблица степеней сложности">Таблица степеней сложности</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="мастерство-ведущего/gm_screen_ru.html#Повышение_существующих_навыков_0" data-path="#Повышение_существующих_навыков_0"><div class="tree-item-inner heading-link" heading-name="Повышение существующих навыков">Повышение существующих навыков</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="мастерство-ведущего/gm_screen_ru.html#Таблица_компетентности_навыков_0" data-path="#Таблица_компетентности_навыков_0"><div class="tree-item-inner heading-link" heading-name="Таблица компетентности навыков">Таблица компетентности навыков</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="мастерство-ведущего/gm_screen_ru.html#Таблица_повышения_при_обучении_0" data-path="#Таблица_повышения_при_обучении_0"><div class="tree-item-inner heading-link" heading-name="Таблица повышения при обучении">Таблица повышения при обучении</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="мастерство-ведущего/gm_screen_ru.html#Стандартные_навыки_0" data-path="#Стандартные_навыки_0"><div class="tree-item-inner heading-link" heading-name="Стандартные навыки">Стандартные навыки</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="мастерство-ведущего/gm_screen_ru.html#Профессиональные_навыки_0" data-path="#Профессиональные_навыки_0"><div class="tree-item-inner heading-link" heading-name="Профессиональные навыки">Профессиональные навыки</div></a><div class="tree-item-children"></div></div></div></div><div class="tree-item mod-collapsible" data-depth="2"><a class="tree-item-self is-clickable mod-collapsible" href="мастерство-ведущего/gm_screen_ru.html#Ситуационные_модификаторы_0" data-path="#Ситуационные_модификаторы_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner heading-link" heading-name="Ситуационные модификаторы">Ситуационные модификаторы</div></a><div class="tree-item-children"><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="мастерство-ведущего/gm_screen_ru.html#Ближний_бой_0" data-path="#Ближний_бой_0"><div class="tree-item-inner heading-link" heading-name="Ближний бой">Ближний бой</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="мастерство-ведущего/gm_screen_ru.html#Дальний_бой_0" data-path="#Дальний_бой_0"><div class="tree-item-inner heading-link" heading-name="Дальний бой">Дальний бой</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="мастерство-ведущего/gm_screen_ru.html#Штрафы_за_дистанцию_0" data-path="#Штрафы_за_дистанцию_0"><div class="tree-item-inner heading-link" heading-name="Штрафы за дистанцию">Штрафы за дистанцию</div></a><div class="tree-item-children"></div></div></div></div><div class="tree-item mod-collapsible" data-depth="2"><a class="tree-item-self is-clickable mod-collapsible" href="мастерство-ведущего/gm_screen_ru.html#Урон_0" data-path="#Урон_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner heading-link" heading-name="Урон">Урон</div></a><div class="tree-item-children"><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="мастерство-ведущего/gm_screen_ru.html#Локации_попаданий_гуманоидов_0" data-path="#Локации_попаданий_гуманоидов_0"><div class="tree-item-inner heading-link" heading-name="Локации попаданий гуманоидов">Локации попаданий гуманоидов</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="мастерство-ведущего/gm_screen_ru.html#Действия_первой_помощи_0" data-path="#Действия_первой_помощи_0"><div class="tree-item-inner heading-link" heading-name="Действия первой помощи">Действия первой помощи</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="мастерство-ведущего/gm_screen_ru.html#Раны_и_лечение_0" data-path="#Раны_и_лечение_0"><div class="tree-item-inner heading-link" heading-name="Раны и лечение">Раны и лечение</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="мастерство-ведущего/gm_screen_ru.html#Постоянные_травмы_0" data-path="#Постоянные_травмы_0"><div class="tree-item-inner heading-link" heading-name="Постоянные травмы">Постоянные травмы</div></a><div class="tree-item-children"></div></div></div></div><div class="tree-item mod-collapsible" data-depth="2"><a class="tree-item-self is-clickable mod-collapsible" href="мастерство-ведущего/gm_screen_ru.html#Движение_и_усталость_0" data-path="#Движение_и_усталость_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner heading-link" heading-name="Движение и усталость">Движение и усталость</div></a><div class="tree-item-children"><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="мастерство-ведущего/gm_screen_ru.html#Путешествия_в_стратегическом_времени_0" data-path="#Путешествия_в_стратегическом_времени_0"><div class="tree-item-inner heading-link" heading-name="Путешествия в стратегическом времени">Путешествия в стратегическом времени</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="мастерство-ведущего/gm_screen_ru.html#Сравнительное_движение_0" data-path="#Сравнительное_движение_0"><div class="tree-item-inner heading-link" heading-name="Сравнительное движение">Сравнительное движение</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="мастерство-ведущего/gm_screen_ru.html#Уровни_усталости_0" data-path="#Уровни_усталости_0"><div class="tree-item-inner heading-link" heading-name="Уровни усталости">Уровни усталости</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="мастерство-ведущего/gm_screen_ru.html#Физическое_усилие_0" data-path="#Физическое_усилие_0"><div class="tree-item-inner heading-link" heading-name="Физическое усилие">Физическое усилие</div></a><div class="tree-item-children"></div></div></div></div></div></div></div></div></div><script defer="">let rs = document.querySelector("#right-sidebar"); rs.classList.toggle("is-collapsed", window.innerWidth < 768); rs.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-right-width"));</script></div></div></div></div></body></html>
